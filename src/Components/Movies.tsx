@@ -68,7 +68,7 @@ const [Loading,setLoading]=useState(false);
            <span className="text-sm font-semibold">Premiered: {movie.show?.premiered?movie.show?.premiered:'N/A'}</span>
            <div className='flex w-full relative flex-col'>
            <span className='font-normal not-italic text-xs'>{movie.show.summary?.length>220?movie.show.summary.slice(0,200):movie.show.summary}</span>
-          <button className='text-xs flex justify-start font-semibold hover:font-bold transition-all 300ms ease-in-out'>Read More</button>
+          <button onClick={()=>HandleDetails(movie.show.name,movie.show.id,movie.show)} className='text-xs flex justify-start font-semibold hover:font-bold transition-all 300ms ease-in-out'>Read More</button>
           </div>
           </div>
        </div>
